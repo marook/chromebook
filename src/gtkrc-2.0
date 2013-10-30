@@ -1,9 +1,14 @@
-# The GtkScrollbar style options are described below
-# https://wiki.gnome.org/GnomeArt/Tutorials/GtkThemes/GtkScrollbar
-style "scroll"
+style "chromebook"
 {
+    # The GtkScrollbar style options are described below
+    # https://wiki.gnome.org/GnomeArt/Tutorials/GtkThemes/GtkScrollbar
     GtkScrollbar::slider-width = 25
     GtkScrollbar::stepper-size = 25
+
+    # The GtkCheckButton style options are described below
+    # https://wiki.gnome.org/GnomeArt/Tutorials/GtkThemes/GtkCheckButton
+    GtkCheckButton::indicator-size = 24
+    GtkCheckButton::indicator-spacing = 4
 }
 
-class "*" style "scroll"
+class "*" style "chromebook"
