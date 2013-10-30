@@ -1,0 +1,6 @@
+style "scroll"
+{
+    GtkScrollbar::slider-width        = 25
+}
+
+class "*" style "scroll"
