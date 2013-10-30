@@ -1,6 +1,9 @@
+# The GtkScrollbar style options are described below
+# https://wiki.gnome.org/GnomeArt/Tutorials/GtkThemes/GtkScrollbar
 style "scroll"
 {
-    GtkScrollbar::slider-width        = 25
+    GtkScrollbar::slider-width = 25
+    GtkScrollbar::stepper-size = 25
 }
 
 class "*" style "scroll"
