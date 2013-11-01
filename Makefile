@@ -1,7 +1,12 @@
+PREFIX="/usr/share/themes"
+
+THEME_NAME="chromebook"
+THEME_INSTALL_DIR="${PREFIX}/${THEME_NAME}"
 
 all:
 
-install: ~/.gtkrc-2.0
+install: ${THEME_INSTALL_DIR}/gtk-2.0/gtkrc
 
-~/.gtkrc-2.0: src/gtkrc-2.0
+${THEME_INSTALL_DIR}/gtk-2.0/gtkrc: src/gtkrc-2.0
+	mkdir -p `dirname "$@"`
 	cp "$^" "$@"

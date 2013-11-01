@@ -1,4 +1,4 @@
-chromebook configurations
+chromebook theme
 
 1) Introduction
 2) Installation
@@ -8,20 +8,27 @@ chromebook configurations
 ------------------------------------------------------------------------
 Introduction
 
-This project contains a few files which should configuring a chromebook
-pixel easier for debian linux.
+This theme can be used with a linux installation on the chromebook
+pixel. This theme increases the size of some widgets to adjust them to
+the high resolution of the chromebook.
 
-I tested the config files with the following system setup:
-* xfce4
+Currently the theme supports GTK 2.0 and xfce4.
 
 
 ------------------------------------------------------------------------
 Installation
 
-Make sure that you read the Makefile before executing this. Otherwise
-some of your configurations may be overwritten.
+The following command will install the 'chromebook' theme globally for
+all users:
 
-$ make install
+$ sudo make install
+
+After installation you can choose the theme within your settings.
+
+You can also install the theme locally in your home directory. The
+following command will do so:
+
+$ make PREFIX=~/.themes install
 
 
 ------------------------------------------------------------------------
