@@ -93,6 +93,16 @@ append_merge_rule(){
     append '	cat $^ > "$@"'
 }
 
+append_image_scale_rule(){
+    dst="$1"
+    src="$2"
+
+    append ''
+    append "${dst}: ${src}"
+    append '	mkdir -p `dirname "$@"`'
+    append '	convert "$^" -resize 200% "$@"'
+}
+
 generate_makefile(){
     all_theme_files=
 
@@ -107,6 +117,9 @@ generate_makefile(){
         case "${rel_theme_file_path}" in
             gtk-2.0/gtkrc)
                 append_merge_rule "${install_dest_file_path}" "${master_theme_file}" "src/gtkrc-2.0"
+                ;;
+            *.xpm)
+                append_image_scale_rule "${install_dest_file_path}" "${master_theme_file}"
                 ;;
             *)
                 append_copy_rule "${master_theme_file}" "${install_dest_file_path}"
