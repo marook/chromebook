@@ -18,8 +18,15 @@ Currently the theme supports GTK 2.0 and xfce4.
 ------------------------------------------------------------------------
 Installation
 
-The following command will install the 'chromebook' theme globally for
-all users:
+You must configure the project before you can install it. Run the
+following command to configure the project:
+
+$ ./configure.sh
+
+The shell prompt will ask you some questions.
+
+After that the following command will install the 'chromebook' theme
+globally for all users:
 
 $ sudo make install
 
